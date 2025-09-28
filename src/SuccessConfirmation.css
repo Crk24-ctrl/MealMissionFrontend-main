@@ -1,0 +1,128 @@
+/* Main container styling */
+.main-container {
+  font-family: "Inter", sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Success container styling */
+.success-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 25px; /* Softer rounded corners */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); 
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 90%;
+  margin: 50px 0; /* Added margin for spacing */
+  transition: transform 0.3s ease; /* Added a subtle hover effect */
+}
+
+.success-container:hover {
+  transform: scale(1.02); /* Slight scaling on hover for interactivity */
+}
+
+/* Success image styling */
+.success-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-right: 30px; /* Spacing between image and text */
+}
+
+/* Success details styling */
+.success-details {
+  flex: 1;
+}
+
+/* Success heading styling */
+.success-heading {
+  font-size: 2.5rem; /* Increased font size */
+  color: #039855;
+
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Success text styling */
+.success-text {
+  font-size: 1.3rem;
+  color: #333; /* Slightly darker text for contrast */
+  margin-bottom: 30px;
+  line-height: 1.6;
+ 
+  text-align: left;
+}
+
+/* Status link styling */
+.status-link {
+  display: inline-block;
+  padding: 15px 30px; /* Increased padding for a more prominent button */
+  background-color: #039855;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500; /* More emphasis on the call to action */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.status-link:hover {
+  background-color: #028a4c;
+  transform: translateY(-4px); /* Enhanced hover effect */
+}
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .success-container {
+    padding: 25px;
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .success-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .success-message {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .home-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Large devices (desktops, 992px and below) */
+@media (max-width: 992px) {
+  .success-container {
+    max-width: 750px;
+  }
+
+  .success-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-button {
+    padding: 11px 22px;
+    font-size: 15px;
+  }
+}

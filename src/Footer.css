@@ -1,0 +1,98 @@
+.footer {
+  padding: 30px 30px;
+  position: fixed; 
+  bottom: -100px; 
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  transition: bottom 0.3s ease-in-out; 
+  
+    z-index: 10; 
+
+
+}
+
+.footer.visible {
+  bottom: 0; 
+}
+
+.footer .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  color: #555;
+}
+
+.footer .contact-info a {
+  text-decoration: none;
+  color: #039855;
+  font-weight: 600;
+}
+
+.footer .contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    justify-content: center;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    padding: 20px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .contact-info {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 18px;
+    justify-content: center;
+  }
+}
+
+/* Small laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 25px 30px;
+  }
+
+  .footer .contact-info {
+    flex-direction: row;
+    gap: 20px;
+    font-size: 18px;
+  }
+}
+
+/* Larger screens (1025px and above) */
+@media (min-width: 1025px) {
+  .footer {
+    padding: 30px 40px;
+  }
+
+  .footer .contact-info {
+    gap: 25px;
+    font-size: 20px;
+  }
+}

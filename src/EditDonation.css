@@ -1,0 +1,202 @@
+/* General styling for the main container */
+.main-container {
+    font-family: "Inter", sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; 
+}
+
+/* Styling for the edit container */
+.edit-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the edit content */
+.edit-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/* Styling for the edit info section */
+.edit-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.edit-info p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.edit-info h3 {
+    margin-bottom: 10px;
+    color: #039855;
+}
+
+/* Styling for the food image */
+.food-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* Styling for the edit buttons */
+.edit-buttons {
+    display: flex; 
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+}
+
+/* Base styling for buttons */
+.button {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+    font-weight: 700; 
+    transition: background-color 0.3s ease;
+    width: 100px; 
+    height: 50px; 
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+/* Specific styling for each button type */
+.edit-button {
+    background-color: #039855;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #028a4b;
+}
+
+.submit-button {
+    background-color: #039855;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #028a4b;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: black;
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+}
+
+/* Styling for input fields in edit mode */
+.edit-info input[type="text"],
+.edit-info input[type="number"],
+.edit-info input[type="date"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 60px; /* Reduce padding for tablets */
+        align-items: stretch; /* Adjust alignment for tablets */
+    }
+
+    .edit-container {
+        padding: 20px; /* Reduce padding for tablets */
+        margin-top: 15px; /* Reduce top margin for tablets */
+        width: 95%; /* Adjust width for tablets */
+        max-width: 600px; /* Adjust max-width for tablets */
+    }
+
+    .food-image {
+        width: 120px; /* Reduce image size for tablets */
+        height: 120px;
+        margin-top: 8px; /* Adjust top margin for image on tablets */
+    }
+
+    .edit-buttons {
+        gap: 8px; /* Reduce gap between buttons for tablets */
+    }
+
+    .button {
+        width: 90px; /* Reduce button width for tablets */
+        height: 45px; /* Reduce button height for tablets */
+        font-size: 14px; /* Adjust font size for buttons on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding-top: 40px; /* Further reduce padding for mobile */
+        align-items: stretch; /* Stretch alignment for mobile */
+    }
+
+    .edit-container {
+        padding: 15px; /* Further reduce padding for mobile */
+        margin-top: 10px; /* Reduce top margin for mobile */
+        width: 100%; /* Full width for mobile */
+        max-width: 100%; /* Remove max-width for mobile */
+    }
+
+    .edit-info {
+        padding: 10px; /* Reduce padding for mobile */
+        margin-bottom: 10px; /* Reduce bottom margin for mobile */
+    }
+
+    .edit-info p {
+        margin: 5px 0; /* Reduce paragraph margin for mobile */
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .edit-info h3 {
+        margin-bottom: 8px; /* Reduce bottom margin for headings */
+        font-size: 18px; /* Adjust font size for headings */
+    }
+
+    .food-image {
+        width: 100px; /* Further reduce image size for mobile */
+        height: 100px;
+        margin-top: 5px; /* Adjust top margin for image on mobile */
+    }
+
+    .edit-buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 5px; /* Reduce gap between buttons for mobile */
+    }
+
+    .button {
+        width: 100%; /* Full width buttons on mobile */
+        height: 40px; /* Further reduce button height */
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}

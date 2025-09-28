@@ -1,0 +1,331 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.view-status-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.status-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.8);
+  min-height: 100vh; /* Set a minimum height */
+ margin-top:-250px;
+}
+
+.status-container h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.5rem; /* Adjusted for consistency */
+  margin-bottom: 30px;
+ 
+}
+.black-text {
+  color: #000000; 
+}
+
+.green-text {
+  color: #039855; 
+}
+
+.status-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.status-section h3 {
+  margin-bottom: 40px;
+  color: #039855;
+  font-weight: 700;
+  border-bottom: 3px solid #039855;
+  padding-bottom: 5px;
+  
+  font-size: 1.5rem;
+
+}
+
+.status-card {
+  background: linear-gradient(135deg, #e9f7ef 0%, #f8fbfc 100%); /* Subtle gradient background */
+  border-radius: 20px;
+  margin-bottom: 25px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 150px;
+  text-align: center; 
+}
+
+.status-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.status-card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-card h4 {
+  margin: 0;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.7px; 
+  text-align: left;
+}
+
+.status-card p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 1.1rem; 
+}
+
+.status-card .buttons {
+  display: flex;
+  gap: 20px; 
+}
+
+.status-card button {
+  padding: 12px 30px; 
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+  letter-spacing: 0.5px; 
+}
+
+.status-card .accept-button {
+  background-color: #039855;
+  color: white;
+}
+
+.status-card .reject-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-card .accept-button:hover {
+  background-color: #028a4b;
+  transform: translateY(-3px);
+}
+
+.status-card .reject-button:hover {
+  background-color: #d32f2f;
+  transform: translateY(-3px);
+}
+
+.status-card .status {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  
+}
+
+.status-card .status.accepted {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-card .status.rejected {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Centering Status Cards */
+.status-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the cards */
+  justify-content: center;
+}
+
+.status-card {
+  max-width: 90%;
+  width: 100%; /* Full width with a max width for responsiveness */
+}
+/* Add this to your ViewStatus.css or a separate CSS file */
+/* Loading Spinner - Dots Rotating Around a Circle */
+.loading-spinner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+
+.loading-spinner div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #039855; /* Primary website color */
+  border-radius: 50%;
+  animation: loading-spinner 1.2s linear infinite;
+}
+
+.loading-spinner div:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation-delay: -1.1s;
+}
+
+.loading-spinner div:nth-child(2) {
+  top: 14%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  animation-delay: -1s;
+}
+
+.loading-spinner div:nth-child(3) {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation-delay: -0.9s;
+}
+
+.loading-spinner div:nth-child(4) {
+  top: 85%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  animation-delay: -0.8s;
+}
+
+.loading-spinner div:nth-child(5) {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  animation-delay: -0.7s;
+}
+
+.loading-spinner div:nth-child(6) {
+  top: 85%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  animation-delay: -0.6s;
+}
+
+.loading-spinner div:nth-child(7) {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  animation-delay: -0.5s;
+}
+
+.loading-spinner div:nth-child(8) {
+  top: 14%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  animation-delay: -0.4s;
+}
+
+@keyframes loading-spinner {
+  0% {
+      transform: scale(1);
+  }
+  50%,
+  100% {
+      transform: scale(0.6);
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .status-container {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .status-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .status-card .buttons {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .status-card h4 {
+    font-size: 1.5rem; /* Adjusted font size for better readability on medium devices */
+  }
+  
+  .status-card p {
+    font-size: 1.1rem; /* Slightly increased font size */
+  }
+  
+  .status-card button {
+    padding: 12px 18px; /* Increased padding for better touch targets */
+    font-size: 1rem;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .status-container {
+    width: 95%;
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+  
+  .status-heading {
+    font-size: 1.8rem; /* Slightly smaller heading */
+    margin-top: 10px; /* Add space on top for better visibility */
+  }
+  
+  .status-section {
+    width: 100%; /* Ensure section takes full width */
+  }
+  
+  .status-card {
+    width: 100%; /* Make sure cards fit within the container */
+    margin: 0 auto 20px; /* Center the cards and add space below */
+    padding: 15px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding doesn't overflow the container */
+  }
+  
+  .status-card h4 {
+    font-size: 1.3rem; /* Adjusted font size for better readability */
+  }
+  
+  .status-card p {
+    font-size: 1.05rem; /* Slightly increased font size */
+  }
+  
+  .status-card button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  }
+  

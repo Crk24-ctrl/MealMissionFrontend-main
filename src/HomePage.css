@@ -1,0 +1,414 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(53, 113, 92, 0.8), rgba(0, 0, 0, 0.8)), url("https://plus.unsplash.com/premium_photo-1682092585257-58d1c813d9b4?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ybGQlMjBodW5nZXJ8ZW58MHx8MHx8fDA%3D") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: slideInDown 1s ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-button {
+  margin: 0 10px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.primary-button {
+  background-color: #039855;
+  color: white;
+}
+
+.secondary-button {
+  background-color: #fff;
+  color: #039855;
+  border: 1px solid #039855;
+}
+
+.primary-button:hover {
+  background-color: #027a47;
+  transform: translateY(-3px);
+}
+
+.secondary-button:hover {
+  background-color: #e6f7f2;
+  transform: translateY(-3px);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  0% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 50px 20px;
+  background-color: #ffffff; /* Ensure no background image is applied */
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  color: #039855;
+  margin-bottom: 20px;
+}
+
+.mission-section p {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* About Us Section */
+.about-us-section {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+  color: #333;
+}
+
+.about-us-section h2 {
+  font-size: 2.8rem;
+  color: #039855;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.about-us-section p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: justify;
+  text-align: left;
+}
+
+.carousel-container {
+  margin-top: 40px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* How It Works Section */
+.how-it-works {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  color: #039855;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  max-width: 300px;
+  background-color: white; /* Ensure background is white */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.step-text-box {
+  padding: 20px;
+}
+
+.step-text-box p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left; /* Align text to the left */
+}
+
+/* Join Community Button */
+.join-community-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  background-color: #039855;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.join-community-button:hover {
+  background-color: #027a47;
+  transform: translateY(-3px);
+}
+
+/* Food Facts Section */
+.food-facts {
+  background-color:  #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.food-facts h2 {
+  font-size: 2.5rem;
+  color: #039855;
+  margin-bottom: 40px;
+}
+
+.facts-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.fact {
+  max-width: 300px;
+  background-color: white; /* Ensure background is white */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fact:hover {
+  transform: translateY(-5px);
+}
+
+.fact img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.fact-text-box {
+  padding: 20px;
+}
+
+.fact-text-box p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left; /* Align text to the left */
+}
+/* Add the following to your existing CSS
+
+/* Special Feature Section */
+.special-feature-section {
+  padding: 50px 20px;  /* Consistent padding */
+  background-color: #ffffff;  /* Matching background */
+  text-align: center;  /* Center align text */
+}
+
+
+.special-feature-section h2 {
+  font-size: 2.5rem;  /* Consistent font size */
+  color: #039855;  /* Matching color */
+   /* Spacing consistent with other sections */
+}
+
+.special-feature-section p {
+  font-size: 1.2rem;  /* Consistent font size */
+  color: #333;  /* Matching text color */
+  max-width: 800px;  /* Consistent width */
+  margin: 0 auto 20px auto;  /* Center alignment and margin */
+  line-height: 1.6;
+  text-align: justify;
+  text-align: left;
+}
+.bold-text {
+  font-weight:bold; /* Ensure text is bold */
+  font-size: 1.5rem;
+  margin-top: 1px;
+  margin-bottom: 30px;
+   /* Adjust font size as needed */
+/* Optional: match color with the section's theme */
+}
+.special-feature-image {
+  max-width: 200px; /* Adjust width as needed */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #039855;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+/* Tablets and Small Screens (up to 768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 80vh; /* Reduce height for smaller screens */
+    padding: 0 10px; /* Add padding to avoid content touching edges */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Decrease font size for headings */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Adjust paragraph font size */
+    max-width: 90%; /* Allow more space for text */
+  }
+
+  .hero-button {
+    padding: 12px 20px; /* Reduce button padding */
+    font-size: 0.9rem; /* Decrease button font size */
+  }
+
+  .mission-section h2, 
+  .how-it-works h2, 
+  .food-facts h2 {
+    font-size: 2rem; /* Decrease heading font size */
+  }
+
+  .mission-section p, 
+  .about-us-section p, 
+  .step-text-box p, 
+  .fact-text-box p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    max-width: 100%; /* Ensure full width is utilized */
+  }
+
+  .steps, 
+  .facts-grid {
+    flex-direction: column; /* Stack steps and facts vertically */
+    align-items: center;
+  }
+
+  .step, 
+  .fact {
+    max-width: 90%; /* Adjust max width for smaller screens */
+  }
+
+  .carousel-container {
+    margin-top: 20px; /* Reduce margin for carousel */
+  }
+
+  .join-community-button {
+    padding: 12px 20px; /* Reduce padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  footer p {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    height: 70vh; /* Further reduce height */
+    padding: 0 5px; /* Further reduce padding */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Further decrease heading font size */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Further adjust paragraph font size */
+    max-width: 100%; /* Use full width */
+  }
+
+  .hero-button {
+    padding: 10px 15px; /* Reduce button padding */
+    font-size: 0.8rem; /* Further decrease font size */
+  }
+
+  .mission-section h2, 
+  .how-it-works h2, 
+  .food-facts h2 {
+    font-size: 1.8rem; /* Further decrease heading font size */
+  }
+
+  .mission-section p, 
+  .about-us-section p, 
+  .step-text-box p, 
+  .fact-text-box p {
+    font-size: 0.9rem; /* Further adjust paragraph font size */
+  }
+
+  .step img, 
+  .fact img {
+    height: 150px; /* Adjust image height */
+  }
+
+  .join-community-button {
+    padding: 10px 15px; /* Further reduce padding */
+    font-size: 0.9rem; /* Further adjust font size */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Further adjust font size */
+  }
+}

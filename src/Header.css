@@ -1,0 +1,154 @@
+/* Header Styles */
+.header {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Padding to ensure space around the content */
+  background-color: white;
+  z-index: 1000; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+/* Logo and Navigation Styles */
+.logo-container {
+  display: flex;
+  align-items: center; 
+  margin-left: 10px; /* Space from the left edge */
+}
+
+.logo {
+  width: 100px; 
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  color: #039855;
+  font-style: normal;
+  font-size: xx-large;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.slogan {
+  font-size: 15px;
+  color: #039855;
+  margin-top: 1px; 
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between navigation items */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and margin are included in total width */
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #039855;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+/* Adding equal space on the left and right of navigation */
+.header .nav {
+  margin-left: auto;
+  margin-right: auto; /* Centers the nav within the header */
+}
+/* Tablets and small screens (up to 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 8px 10px; /* Reduced padding */
+    flex-direction: row; /* Ensure elements are in a row */
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-left: 0;
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .logo {
+    width: 70px; /* Adjust logo size */
+  }
+
+  .logo-text {
+    font-size: 1rem; /* Further reduced font size */
+  }
+
+  .header nav {
+    width: auto; /* Let nav take up the required width */
+    display: flex; /* Keep the navigation items in a row */
+    margin-top: 0;
+  }
+
+  .header nav ul {
+    display: flex;
+    gap: 10px; /* Decreased gap */
+  }
+
+  .header nav ul li {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .header nav ul li a {
+    font-size: 0.9rem; /* Further reduced font size */
+  }
+}
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 6px 8px; /* Less padding on very small screens */
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .logo {
+    width: 60px; /* Smaller logo for smaller screens */
+  }
+
+  .logo-text {
+    display: none; /* Hide logo text on mobile */
+  }
+
+  .header nav {
+    margin-top: 0;
+    width: auto; /* Let nav take up the required width */
+    display: flex; /* Ensure nav items stay in a row */
+  }
+
+  .header nav ul {
+    display: flex;
+    gap: 8px; /* Decreased gap */
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .header nav ul li {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .header nav ul li a {
+    font-size: 0.8rem; /* Further reduce font size for navigation links */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}

@@ -1,0 +1,212 @@
+.account-page {
+    display: flex;
+    flex-direction: column;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh; 
+    padding-bottom: 100px;
+}
+
+.account {
+    width: 100%;
+    max-width: 800px;
+    margin: 140px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 11px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    overflow: hidden;
+}
+
+.account h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+
+.user-name {
+    color: #039855;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.profile-picture {
+    flex: 0 0 100px;
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
+
+.profile-picture img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.profile-info {
+    flex: 10;
+    padding: 20px;
+}
+
+.profile-info-item {
+    margin-bottom: 20px;
+}
+
+.profile-info-item p,
+.profile-info-item label {
+    font-size: 20px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.profile-info-item strong {
+    font-weight: 600;
+    color: #333333;
+}
+
+.profile-info-item input,
+.profile-info-item textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-info-item textarea {
+    resize: vertical;
+    height: 100px;
+    font-family: "Inter", sans-serif;
+}
+
+.edit-button {
+    padding: 12px 25px;
+    background-color: #039855;
+    color: white;
+    border: none;
+    width: 120px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.edit-button:hover {
+    background-color: #028846;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .account {
+        margin: 100px auto;
+        padding: 20px;
+    }
+
+    .account h2 {
+        font-size: 40px;
+    }
+
+    .profile-picture {
+        top: -20px;
+    }
+
+    .profile-picture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info-item p,
+    .profile-info-item label {
+        font-size: 18px;
+    }
+
+    .profile-info-item input,
+    .profile-info-item textarea {
+        font-size: 16px;
+    }
+
+    .edit-button {
+        padding: 10px 20px;
+        width: 100px;
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .account {
+        margin: 80px auto;
+        padding: 10px 20px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .account h2 {
+        font-size: 24px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-picture {
+        top: 0;
+        margin-bottom: 15px;
+    }
+
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .profile-info {
+        padding: 0;
+    }
+
+    .profile-info-item p,
+    .profile-info-item label {
+        font-size: 14px;
+    }
+
+    .profile-info-item input,
+    .profile-info-item textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .edit-button {
+        padding: 6px 10px;
+        width: 80px;
+        font-size: 0.7rem;
+        margin-top: 10px;
+        margin-left: auto; /* Added for centering */
+        margin-right: auto; /* Added for centering */
+        display: block; /* Ensure the button takes up its own line */
+    }
+}

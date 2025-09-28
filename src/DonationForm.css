@@ -1,0 +1,233 @@
+.donation-form-page {
+    display: flex;
+    flex-direction: column;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Inter", sans-serif;
+   
+    
+}
+.donation-form-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    overflow: hidden;
+    transform: scale(0.8);
+    
+}
+.form-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 50px;
+    color: #039855;
+    text-align: center;
+    
+}
+.title-black {
+    color: #333;
+}
+.title-green {
+    color: #039855;
+}
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap between elements */
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Increased gap between label and input */
+}
+.form-group label {
+   
+     display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #333;
+}
+.form-input, .form-select {
+    padding: 14px; /* Increased padding for larger inputs */
+    font-size: 1rem; /* Larger font size for better readability */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+   
+  font-family: 'Inter', sans-serif;
+}
+.form-input:focus, .form-select:focus {
+    border-color: #039855;
+    box-shadow: 0 0 8px rgba(3, 152, 85, 0.3);
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+.form-inputt {
+    margin-top: 10px; /* Increased margin for better spacing */
+}
+.image-preview {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between image and button */
+    margin-top: 15px; /* Increased margin for more separation */
+}
+.image-preview img {
+    max-width: 120px; /* Larger preview size */
+    max-height: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.delete-image-button {
+    background-color: #c62828;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px; /* Increased padding for larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Larger font size for better readability */
+}
+.checkbox-group {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    /* Increased space between checkbox and label */
+}
+.checkbox-input {
+    width: 24px; /* Larger checkbox size */
+    height: 24px;
+    accent-color: #039855; /* Custom color for the checkbox */
+}
+.checkbox-label {
+    font-size: 1rem; /* Larger font size for better readability */
+    color: #333;
+    
+    
+}
+.submit-button {
+    padding: 15px 30px;
+    background-color: #039855;
+    color: white;
+    border: none;
+    width: 60%; /* Increased button width */
+    max-width: 200px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 20px auto 0; /* Increased top margin */
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem; /* Larger font size for better readability */
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+ 
+}
+.error-message {
+    color: #f44336;
+    font-size: 1.1rem; /* Larger font size for better readability */
+    margin-bottom: 25px; /* Increased bottom margin for more space */
+    text-align: center;
+}
+/* Tablet and small screen adjustments */
+@media (max-width: 768px) {
+    .donation-form-container {
+        margin: 50px auto;
+        padding: 20px;
+        transform: scale(1);
+        width: 90%;
+        display: block;
+    }
+
+    .form-title {
+        font-size: 36px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-input, .form-select {
+        font-size: 0.9rem;
+    }
+
+    .image-preview img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .delete-image-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .checkbox-input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .checkbox-label {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile device adjustments */
+@media (max-width: 480px) {
+    .donation-form-container {
+        margin: 80px auto 20px;
+        padding: 15px;
+        width: 80%;
+        max-width: 320px;
+        display: block;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-input, .form-select {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    .image-preview img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .delete-image-button {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .checkbox-input {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checkbox-label {
+        font-size: 0.85rem;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        max-width: 160px;
+    }
+}

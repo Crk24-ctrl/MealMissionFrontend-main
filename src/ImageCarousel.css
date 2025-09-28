@@ -1,0 +1,126 @@
+.image-carousel {
+    max-width: 500px; 
+    margin: 0 auto;
+    padding: 40px 20px 20px; 
+    overflow: hidden;
+   
+
+}
+
+.image-carousel img {
+    width: 100%;
+    max-height: 400px; 
+    object-fit: cover; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+   
+}
+
+/* Style for Swiper pagination dots */
+.swiper-pagination {
+    margin-top: 20px; 
+    position: static; 
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb; 
+    opacity: 1;
+    border: none;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #039855; 
+}
+
+/* Optional: Add arrow styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+/* Tablets and Small Screens (up to 768px) */
+@media (max-width: 768px) {
+    .image-carousel {
+      max-width: 90%; /* Increase the carousel width to utilize more screen space */
+      padding: 30px 15px 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .image-carousel img {
+      max-height: 300px; /* Reduce image height for smaller screens */
+    }
+  
+    .swiper-pagination {
+      margin-top: 15px; /* Reduce margin for pagination dots */
+    }
+  
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px; /* Slightly reduce dot size */
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      font-size: 20px; /* Reduce arrow size */
+      width: 35px;
+      height: 35px; /* Adjust arrow dimensions */
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 18px; /* Reduce arrow icon size */
+    }
+  }
+  
+  /* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .image-carousel {
+        max-width: 100%; /* Utilize full width on mobile screens */
+        padding: 20px 10px 10px; /* Further reduce padding */
+    }
+
+    .image-carousel img {
+        max-height: none; /* Remove the max-height to allow images to scale naturally */
+        height: auto; /* Ensure the image scales based on width */
+        object-fit: contain; /* Maintain aspect ratio and prevent cropping */
+    }
+
+    .swiper-pagination {
+        margin-top: 10px; /* Further reduce margin for pagination dots */
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px; /* Further reduce dot size */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 18px; /* Further reduce arrow size */
+        width: 30px;
+        height: 30px; /* Adjust arrow dimensions */
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 16px; /* Further reduce arrow icon size */
+    }
+}

@@ -1,0 +1,191 @@
+.sign-up-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: -30px;
+}
+.sign-up {
+  width: 60%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transform: scale(0.85);
+}
+.sign-up h2{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  color: #039855;
+}
+.sign-up .Create {
+  color: black;
+}
+.sign-up .Account {
+  color: #039855;
+}
+.sign-up form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  max-width: 500px;
+ 
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+.input-group input, .phone-input select, .phone-input input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-group input:focus, .phone-input select:focus, .phone-input input:focus {
+  border-color: #039855;
+  box-shadow: 0 0 8px rgba(3, 152, 85, 0.3);
+  outline: none;
+}
+.phone-input {
+  display: flex;
+}
+.phone-input select {
+  flex: 1;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+.phone-input input {
+  flex: 3;
+}
+.sign-up button {
+  padding: 15px 30px;
+  background-color: #039855;
+  color: white;
+  border: none;
+  width: 60%;
+  max-width: 200px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.sign-up button:hover{
+  background-color: #028a4e;
+  transform: translateY(-2px);
+}
+.sign-up p{
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.sign-up p a {
+  color: #039855;
+  text-decoration: none;
+}
+.sign-up p a:hover{
+  text-decoration: underline;
+}
+.notification {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .sign-up {
+    width: 70%; /* Adjust width for tablets and smaller screens */
+    max-width: 400px; /* Adjust max width for better fit */
+    padding: 25px; /* Adjust padding for a more compact layout */
+  }
+
+  .sign-up h2 {
+    font-size: 2rem; /* Decrease heading size slightly */
+    margin-bottom: 20px; /* Reduce margin below heading */
+  }
+
+  .input-group input, 
+  .sign-up button {
+    width: 100%; /* Ensure inputs and buttons take full width */
+  }
+
+  .phone-input {
+    flex-direction: column; /* Stack select and input vertically */
+  }
+
+  .phone-input select {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add space between select and input */
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up {
+    width: 85%; /* Utilize more of the width on very small screens */
+    max-width: 300px; /* Adjust max width to fit better on smaller screens */
+    padding: 20px; /* Further reduce padding for compactness */
+  }
+
+  .sign-up h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+    margin-bottom: 15px; /* Adjust margin for better spacing */
+  }
+
+  .input-group input {
+    padding: 10px; /* Smaller padding for input fields */
+  }
+
+  .sign-up button {
+    width: 100%; /* Full-width button for easier tapping */
+    max-width: none; /* Remove max-width to allow full width */
+    padding: 12px; /* Adjust padding for comfort on smaller screens */
+  }
+  
+  .phone-input {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .phone-input select,
+  .phone-input input {
+    width: 100%; /* Ensure select and input take full width */
+    margin-bottom: 10px; /* Add spacing for smaller screens */
+  }
+
+  .notification {
+    max-width: 100%; /* Ensure notification takes full width */
+    margin-bottom: 15px; /* Reduce margin for better spacing */
+  }
+}

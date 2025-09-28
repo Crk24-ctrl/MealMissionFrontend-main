@@ -1,0 +1,361 @@
+/* DonationFeed.css */
+
+.main-container {
+    font-family: "Inter", sans-serif;
+    background-image: url('background.jpg');
+ 
+    background-position: center center; /* Center the image */
+    display: flex;
+    background-size: contain;
+    flex-direction: column;
+    align-items: center; 
+    
+    min-height: 300vh;
+}
+
+.donation-feed-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 950px;
+    margin: 160px auto;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.donation-feed-container h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    font-size: 2.5rem; 
+    margin-bottom: 30px; 
+}
+.username{
+    color: #039855;
+}
+
+.donation-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    margin-bottom: 20px; 
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.donation-card .status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.filter-select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.donation-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.donation-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.donation-image {
+    width: 150px; /* Consistent with form preview size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Rounded corners for consistency */
+}
+
+.donation-info {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.donation-info h3 {
+    margin: 0;
+    color: #039855;
+    font-weight: 700;
+    font-size: 1.25rem; /* Adjusted for consistency */
+}
+
+.donation-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 1rem; /* Adjusted for consistency */
+}
+
+.request-button {
+    padding: 12px 25px;
+    background-color: #039855;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    align-self: flex-start;
+    font-size: 1rem; /* Adjusted for consistency */
+    font-weight: 600;
+}
+
+.request-button:hover {
+    background-color: #028a4b; /* Slightly darker green on hover */
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+/* Base styling for both fresh and rotten descriptions */
+
+/* Base styling for all descriptions */
+.donation-description {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Specific styling for rotten descriptions */
+.rotten-description {
+    background-color: #ffe6e6;
+    border: 2px solid #ff4c4c;
+    color: #b30000;
+}
+
+/* Unique indicator for rotten descriptions */
+.rotten-description::before {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Specific styling for fresh descriptions */
+.fresh-description {
+    background-color: #e6ffe6;
+    border: 2px solid #4caf50;
+    color: #2e7d32;
+}
+
+/* Unique indicator for fresh descriptions */
+.fresh-description::before {
+    
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Loading Spinner - Dots Rotating Around a Circle */
+.loading-spinner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.loading-spinner div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #039855; /* Primary website color */
+    border-radius: 50%;
+    animation: loading-spinner 1.2s linear infinite;
+}
+
+.loading-spinner div:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation-delay: -1.1s;
+}
+
+.loading-spinner div:nth-child(2) {
+    top: 14%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    animation-delay: -1s;
+}
+
+.loading-spinner div:nth-child(3) {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation-delay: -0.9s;
+}
+
+.loading-spinner div:nth-child(4) {
+    top: 85%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    animation-delay: -0.8s;
+}
+
+.loading-spinner div:nth-child(5) {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    animation-delay: -0.7s;
+}
+
+.loading-spinner div:nth-child(6) {
+    top: 85%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    animation-delay: -0.6s;
+}
+
+.loading-spinner div:nth-child(7) {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    animation-delay: -0.5s;
+}
+
+.loading-spinner div:nth-child(8) {
+    top: 14%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    animation-delay: -0.4s;
+}
+
+@keyframes loading-spinner {
+    0% {
+        transform: scale(1);
+    }
+    50%,
+    100% {
+        transform: scale(0.6);
+    }
+}
+
+  
+
+  
+@media (max-width: 768px) {
+    .donation-feed-container {
+        margin: 40px auto; /* Adjust margin for tablets */
+        padding: 20px; /* Adjust padding for tablets */
+        transform: scale(0.9); /* Scale down slightly */
+    }
+
+    .donation-feed-container h1 {
+        font-size: 1.8rem; /* Adjust font size for titles */
+    }
+
+    .search-filter-bar {
+        flex-direction: column; /* Stack search and filter inputs vertically */
+        gap: 10px; /* Adjust gap */
+    }
+
+    .donation-card {
+        flex-direction: column;
+        align-items: stretch; /* Stretch to full width */
+        padding: 15px; /* Adjust padding for donation cards */
+    }
+
+    .donation-image {
+        width: 100%; /* Full width for images */
+        height: auto;
+    }
+
+    .donation-info {
+        padding-left: 0;
+        padding-top: 12px; /* Add padding top for separation */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 20px; /* Consistent padding for smaller screens */
+        background-size: 100%; /* Zoom out the background image more */
+        background-repeat: no-repeat; /* Prevent background repetition */
+        background-position: center; /* Keep the background image centered */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .donation-feed-container {
+        width: 90%; /* Make the content box smaller to fit and center */
+        max-width: 400px; /* Set a maximum width for the content box */
+        padding: 10px; /* Reduce padding for better fit */
+        margin: 0; /* Remove extra margin */
+        transform: scale(0.95); /* Slightly zoom out the content box */
+        box-shadow: none; /* Optional: remove or adjust shadow to fit screen */
+    }
+
+    .donation-feed-container h1 {
+        font-size: 1.5rem; /* Adjust font size for titles */
+        margin-top: 0; /* Remove extra margin */
+    }
+
+    .search-input, .filter-select {
+        font-size: 0.85rem; /* Adjust font size for inputs */
+    }
+
+    .donation-card {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .request-button {
+        padding: 8px 15px; /* Adjust padding for button */
+        font-size: 0.85rem; /* Adjust font size for button */
+    }
+}
